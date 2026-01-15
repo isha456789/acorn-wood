@@ -1,0 +1,29 @@
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+
+.btnA{
+    height: 54px;
+    padding: 0 49px;
+    
+    &.bg-F6F1E2-btn{
+        background-color: $color-F6F1E2;
+        border-radius: 32px;
+        border: 1px solid $color-F6F1E2;
+        color: $color-546E54;
+
+        &:hover{
+            background-color: transparent;
+            color: $color-F6F1E2;
+            border: 1px solid $color-F6F1E2;
+ 
+        }
+    }
+
+}
