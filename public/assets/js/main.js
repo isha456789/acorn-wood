@@ -20433,7 +20433,23 @@ var Plugins = /*#__PURE__*/function () {
   }
   plugins_createClass(Plugins, [{
     key: "init",
-    value: function init() {}
+    value: function init() {
+      this.WhyourSlider();
+    }
+  }, {
+    key: "WhyourSlider",
+    value: function WhyourSlider() {
+      $(document).ready(function () {
+        $(".why-our-slider").slick({
+          arrows: false,
+          dots: false,
+          infinite: true,
+          autoplay: true,
+          slidesToShow: 3,
+          slidesToScroll: 1
+        });
+      });
+    }
   }]);
   return Plugins;
 }();

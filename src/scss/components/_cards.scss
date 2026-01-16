@@ -10,3 +10,30 @@
         }
     }
 }
+
+.why-our-cards {
+    padding-left: 33px;
+    padding-right: 33px;
+}
+
+.why-our-slider {
+    height: 100%;
+
+    .slick-list,
+    .slick-track {
+        height: 100%;
+
+    }
+
+    .slick-track{
+        display: flex !important;
+    }
+
+    .slick-slide {
+        height: auto;
+
+        &>div {
+            height: 100%;
+        }
+    }
+}
