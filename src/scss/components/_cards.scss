@@ -14,26 +14,24 @@
 .why-our-cards {
     padding-left: 33px;
     padding-right: 33px;
+    background-color: rgba($color: $color-5C3D38, $alpha: 0.5);
+
+    @include media-breakpoint-down(md) {
+        background-color: rgba($color: $color-5C3D38, $alpha: 1);
+    }
 }
 
-.why-our-slider {
-    height: 100%;
+.testimonial-card {
+    box-shadow: 0px 0px 15px  #010B182E;
+    padding-left: 33px;
+    padding-right: 33px;
 
-    .slick-list,
-    .slick-track {
-        height: 100%;
-
+    @include media-breakpoint-down(md){
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
-    .slick-track{
-        display: flex !important;
-    }
-
-    .slick-slide {
-        height: auto;
-
-        &>div {
-            height: 100%;
-        }
+    .quote-mark{
+        height: 27px;
     }
 }
