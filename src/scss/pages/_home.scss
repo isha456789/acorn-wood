@@ -1,3 +1,49 @@
 body{
     background-color: #F6F1E2;
 }
+
+.hero-section{
+    height: 700px;
+    .hero-img{
+        height: 670px;
+        width: 650px;
+    }
+    @include media-breakpoint-down(xl){
+        .hero-img{
+            height: 550px;
+            width: 550px;
+        }
+    }
+    @include media-breakpoint-down(lg){
+        height: 770px;
+        .hero-img{
+            height: 415px;
+            width: 400px;
+        }
+    }
+    @include media-breakpoint-down(md){
+        .hero-img{
+            height: 300px;
+            width: 300px;
+        }
+    }
+}
+
+.left-right-section{
+    .left-right-img{
+        height: 563px;
+    }
+    .right-bg-pattern{
+        height: 183px;
+        width: 183px;
+        bottom: -15%;
+        right: -5%;
+    }
+    .left-bg-pattern {
+        height: 132px;
+        width: 175px;
+        left: -7%;
+        bottom: 10%;
+
+    }
+}

@@ -49,6 +49,25 @@
   text-overflow: ellipsis;
 }
 
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+
+  &>* {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+
+.row8 {
+  margin-left: -8px !important;
+  margin-right: -8px !important;
+
+  &>* {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
 @include media-breakpoint-down(lg) {
   .px-p-0 {
     padding-left: 0 !important;
