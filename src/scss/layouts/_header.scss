@@ -1,0 +1,44 @@
+.header{
+    padding-left: 39px;
+    padding-right: 39px;
+    @include media-breakpoint-down(lg){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header-logo{
+        height: 28px;
+    }
+    .burger-menu{
+        height: 51px;
+        width: 51px;
+        @include media-breakpoint-down(md){
+            height: 25px;
+            width: 25px;
+        }
+        .close-icon{
+            display: none;
+        }
+        &.active{
+            .menu-icon{
+                display: none !important;
+            }
+        }
+    }
+    nav{
+        ul{
+            li{
+                margin-right: 32px;
+                &:last-child{
+                    margin-right: 0px !important;
+                }
+                @include media-breakpoint-down(lg){
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+    &.menu-open{
+        height: 100vh;
+        overflow: auto;
+    }
+}
