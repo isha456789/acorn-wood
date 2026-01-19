@@ -52,3 +52,22 @@ button,
     }
 
 }
+.btnB{
+    height: 54px;
+    padding: 0 49px;
+    
+    &.bg-F6F1E2-btn{
+        background-color: $color-61758F;
+        border: 1px solid $color-61758F;
+        border-radius: 100px;
+        color: $white;
+
+        &:hover{
+            background-color: transparent;
+            color: $white;
+            border: 1px solid $white;
+ 
+        }
+    }
+
+}
