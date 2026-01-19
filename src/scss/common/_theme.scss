@@ -40,6 +40,15 @@
     padding-right: 15px !important;
   }
 }
+.row4{
+  margin-left: -4px !important;
+  margin-right: -4px !important;
+
+  &>*{
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+}
 
 .w-fit {
   width: fit-content;
