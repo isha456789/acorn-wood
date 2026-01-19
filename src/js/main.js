@@ -1,29 +1,28 @@
-import $ from 'jquery';
-import '@popperjs/core';
-import 'bootstrap/dist/js/bootstrap';
-import 'select2/dist/js/select2.min.js';
-import '../../node_modules/masonry-layout/dist/masonry.pkgd.min';
+import $ from "jquery";
+import "@popperjs/core";
+import "bootstrap/dist/js/bootstrap";
+import "select2/dist/js/select2.min.js";
+import "../../node_modules/masonry-layout/dist/masonry.pkgd.min";
 
-import { App } from './parts/app.js'
-import { Plugins } from './parts/plugins.js'
-import { Parts } from './parts/parts.js'
-import { Truncate } from './parts/truncate.js';
-import { Accordion } from './parts/accordion.js';
-import { Privacy } from './parts/privacy.js';
-
+import { App } from "./parts/app.js";
+import { Plugins } from "./parts/plugins.js";
+import { Parts } from "./parts/parts.js";
+import { Truncate } from "./parts/truncate.js";
+import { Accordion } from "./parts/accordion.js";
+import { Privacy } from "./parts/privacy.js";
+import { Fancybox } from "@fancyapps/ui";
 
 // export for others scripts to use
 window.$ = $;
 window.jQuery = jQuery;
 
 $(function () {
-
   window.windowWidth = $(window).width();
   window.windowHeight = $(window).height();
 
-  window.isiPhone = navigator.userAgent.toLowerCase().indexOf('iphone');
-  window.isiPad = navigator.userAgent.toLowerCase().indexOf('ipad');
-  window.isiPod = navigator.userAgent.toLowerCase().indexOf('ipod');
+  window.isiPhone = navigator.userAgent.toLowerCase().indexOf("iphone");
+  window.isiPad = navigator.userAgent.toLowerCase().indexOf("ipad");
+  window.isiPod = navigator.userAgent.toLowerCase().indexOf("ipod");
 
   //Functions List Below
 
@@ -47,3 +46,17 @@ $(function () {
 });
 
 // ===========================================================================
+
+$(document).ready(function () {
+  Fancybox.bind("[data-fancybox='gallery']", {
+    animated: true,
+    dragToClose: true,
+    Toolbar: {
+      display: ["close"],
+    },
+    Html5video: {
+      autoplay: true,
+      controls: true,
+    },
+  });
+});
