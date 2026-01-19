@@ -1,0 +1,75 @@
+.why-our-section {
+    .slick-arrows {
+        .slick-arrow {
+            width: 44px;
+            height: 44px;
+
+            @include media-breakpoint-down(md) {
+                width: 35px;
+                height: 35px;
+            }
+
+            &.slick-disabled {
+                opacity: 50%;
+            }
+        }
+    }
+}
+
+.why-our-slider {
+    height: 100%;
+
+    .slick-list,
+    .slick-track {
+        height: 100%;
+
+    }
+
+    .slick-track {
+        display: flex !important;
+    }
+
+    .slick-list {
+        margin-left: -7px;
+        margin-right: -7px;
+    }
+
+    .slick-slide {
+        height: auto;
+        padding-left: 7px;
+        padding-right: 7px;
+
+        &.slick-active {
+            .why-our-cards {
+                background-color: rgba($color: $color-5C3D38, $alpha: 1);
+            }
+        }
+
+        &>div {
+            height: 100%;
+        }
+    }
+}
+
+.testimonial-slider {
+    .slick-list {
+        margin-left: -9px;
+        margin-right: -9px;
+        overflow: visible;
+
+        .slick-slide {
+            padding-left: 9px;
+            padding-right: 9px;
+            opacity: 50%;
+            transition: all 0.3s ease-in-out;
+
+            @include media-breakpoint-down(lg){
+                opacity: 100%;
+            }
+
+            &.slick-active {
+                opacity: 100%;
+            }
+        }
+    }
+}

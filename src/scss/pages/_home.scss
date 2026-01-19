@@ -1,50 +1,201 @@
-body{
+body {
     background-color: #F6F1E2;
 }
 
-.hero-section{
+.hero-section {
     height: 700px;
-    .hero-img{
+
+    .hero-img {
         height: 670px;
         width: 650px;
     }
-    @include media-breakpoint-down(xl){
-        .hero-img{
+
+    @include media-breakpoint-down(xl) {
+        .hero-img {
             height: 550px;
             width: 550px;
         }
     }
-    @include media-breakpoint-down(lg){
+
+    @include media-breakpoint-down(lg) {
         height: 770px;
-        .hero-img{
+
+        .hero-img {
             height: 415px;
             width: 400px;
         }
     }
-    @include media-breakpoint-down(md){
-        .hero-img{
+
+    @include media-breakpoint-down(md) {
+        .hero-img {
             height: 300px;
             width: 300px;
         }
     }
 }
 
-.left-right-section{
-    .left-right-img{
+.left-right-section {
+    .left-right-img {
         height: 563px;
+
+        @include media-breakpoint-down(lg) {
+            height: 702px;
+        }
+
+        @include media-breakpoint-down(md) {
+            height: 350px;
+        }
     }
-    .right-bg-pattern{
+
+    .right-bg-pattern {
         height: 183px;
         width: 183px;
         bottom: -15%;
         right: -5%;
+
+        @include media-breakpoint-down(lg) {
+            right: 0%;
+            bottom: -8%;
+        }
+
+        @include media-breakpoint-down(md) {
+            height: 100px;
+            width: 100px;
+        }
     }
+
     .left-bg-pattern {
         height: 132px;
         width: 175px;
         left: -7%;
         bottom: 10%;
 
+        @include media-breakpoint-down(lg) {
+            right: 0%;
+            left: auto;
+            bottom: -3%;
+        }
+
+        @include media-breakpoint-down(md) {
+            height: 72px;
+            width: 115px;
+        }
+    }
+}
+
+.two-panel-section {
+    .two-panel-img {
+        height: 648px;
+
+        @include media-breakpoint-down(md) {
+            height: 380px;
+        }
+
+        .two-panel-card {
+            padding-left: 58px;
+            padding-right: 58px;
+
+            @include media-breakpoint-down(md) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+
+.accrodion-wrapper {
+    background-color: rgba($color: $color-C2731440, $alpha: 0.25);
+
+    transition: all 0.3s ease-in-out;
+
+    &:has(.closet-header.active) {
+        background-color: rgba($color: $color-C2731440, $alpha: 1);
+        color: $color-F7F2E3;
+        padding-bottom: 73px;
+
+        @include media-breakpoint-down(md) {
+            padding-bottom: 40px;
+        }
+    }
+
+    .closet-header {
+        padding-left: 40px;
+        padding-right: 40px;
+
+        @include media-breakpoint-down(md) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &.active {
+            padding-bottom: 0px !important;
+
+            &>div {
+                color: $color-F7F2E3;
+            }
+
+            .bottom-arrow {
+                .white-arrow {
+                    display: block;
+                }
+
+                .black-arrow {
+                    display: none;
+                }
+            }
+        }
+
+        .bottom-arrow {
+            height: 27px;
+
+            @include media-breakpoint-down(md) {
+                height: 22px;
+            }
+
+            .white-arrow {
+                display: none;
+            }
+
+            .black-arrow {
+                display: block;
+            }
+        }
+    }
+
+    .closet-content {
+        padding-left: 40px;
+        padding-right: 40px;
+
+        @include media-breakpoint-down(md) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+.gallery {
+    column-count: 3;
+    column-gap: 22px;
+
+    @include media-breakpoint-down(lg){
+        column-count: 2;
+    }
+
+    @include media-breakpoint-down(md){
+        column-count: 1;
+    }
+
+    img,video {
+        width: 100%;
+        height: auto;
+        margin-bottom: 22px;
+        display: block;
+        break-inside: avoid;
+
+        @include media-breakpoint-down(md){
+            margin-bottom: 15px;
+        }
     }
 }
 

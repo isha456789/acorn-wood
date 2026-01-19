@@ -20433,7 +20433,54 @@ var Plugins = /*#__PURE__*/function () {
   }
   plugins_createClass(Plugins, [{
     key: "init",
-    value: function init() {}
+    value: function init() {
+      this.WhyourSlider();
+      this.TestimonialSlider();
+    }
+  }, {
+    key: "WhyourSlider",
+    value: function WhyourSlider() {
+      $(document).ready(function () {
+        $(".why-our-slider").slick({
+          arrows: true,
+          dots: false,
+          infinite: false,
+          autoplay: false,
+          slidesToShow: 2.5,
+          slidesToScroll: 1,
+          prevArrow: $(".why-our-section .prev-arrow"),
+          nextArrow: $(".why-our-section .next-arrow"),
+          responsive: [{
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }]
+        });
+      });
+    }
+  }, {
+    key: "TestimonialSlider",
+    value: function TestimonialSlider() {
+      $(document).ready(function () {
+        $(".testimonial-slider").slick({
+          arrows: false,
+          dots: false,
+          infinite: true,
+          autoplay: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [{
+            breakpoint: 769,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }]
+        });
+      });
+    }
   }]);
   return Plugins;
 }();
@@ -20502,13 +20549,27 @@ var Accordion = /*#__PURE__*/function () {
     key: "Accordion",
     value: function Accordion() {
       $(document).ready(function () {
-        // Open the first child by default
-        $('.closet-header').first().addClass('active').next('.closet-content').slideDown();
+        // 🔹 Step 1: Hide all contents
+        $(".closet-content").hide();
 
-        // Handle click events for closet headers
-        $('.closet-header').click(function () {
-          $(this).toggleClass('active').next('.closet-content').slideToggle();
-          $('.closet-header').not(this).removeClass('active').next('.closet-content').slideUp();
+        // 🔹 Step 2: First accordion open by default
+        $(".closet-header").first().addClass("active").next(".closet-content").show();
+
+        // 🔹 Step 3: Click handler
+        $(".closet-header").on("click", function () {
+          var $this = $(this);
+          var $content = $this.next(".closet-content");
+
+          // Agar already active hai → kuch mat karo
+          if ($this.hasClass("active")) return;
+
+          // 🔹 Close all
+          $(".closet-header").removeClass("active");
+          $(".closet-content").slideUp();
+
+          // 🔹 Open clicked one
+          $this.addClass("active");
+          $content.slideDown();
         });
       });
     }

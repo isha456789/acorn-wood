@@ -27,7 +27,7 @@
     "webpack-watch": "^0.2.0"
   },
   "dependencies": {
-    "@fancyapps/ui": "^5.0.20",
+    "@fancyapps/ui": "^6.1.7",
     "@popperjs/core": "^2.11.8",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",

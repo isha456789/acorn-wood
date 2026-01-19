@@ -8,7 +8,24 @@
     src: url("../../../public/assets/fonts/outfit-regular.ttf") format('truetype');
     font-weight: 400;
 }
+@font-face {
+    font-family: "poppins-regular";
+    src: url("../../../public/assets/fonts/poppins-regular.ttf") format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: "poppins-semibold";
+    src: url("../../../public/assets/fonts/poppins-semibold.ttf") format('truetype');
+    font-weight: 400;
+}
 
 .outfit-regular{
     font-family: "outfit-regular";
+}
+
+.poppins-regular{
+    font-family: "poppins-regular";
+}
+.poppins-semibold{
+    font-family: "poppins-semibold";
 }
