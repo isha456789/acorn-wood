@@ -18374,6 +18374,10 @@ body {
     margin-bottom: 15px;
   }
 }
+.gallery .gallery-img .play-btn {
+  height: 73px;
+  width: 73px;
+}
 
 .gallery-container {
   column-count: 3;

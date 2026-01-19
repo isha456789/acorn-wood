@@ -197,9 +197,11 @@ body {
             margin-bottom: 15px;
         }
     }
-}
 
-.gallery-container{
-    column-count: 3;
-    column-gap: 16px;
+    .gallery-img{
+        .play-btn{
+            height: 73px;
+            width: 73px;
+        }
+    }
 }

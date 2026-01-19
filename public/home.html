@@ -516,22 +516,17 @@
             <!-- VIDEO -->
             <a
               data-fancybox="gallery"
-              data-type="video"
               href="assets/images/scroll-sub-video.mp4"
+              data-type="html5video"
+              class="position-relative gallery-img"
             >
-              <video
-                loop
-                autoplay
-                muted
-                playsinline
-                preload="metadata"
+              <img
+                src="https://picsum.photos/id/613/334/502"
                 class="radius10"
-              >
-                <source
-                  src="assets/images/scroll-sub-video.mp4"
-                  type="video/mp4"
-                />
-              </video>
+              />
+              <div class="play-btn position-absolute top-left-center">
+                <img src="assets/images/play-btn.svg" alt="" class="w-100 h-100">
+              </div>
             </a>
 
             <a
@@ -769,29 +764,29 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    Fancybox.bind("[data-fancybox='gallery']", {
-      animated: true,
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        Fancybox.bind("[data-fancybox='gallery']", {
+          animated: true,
 
-      Toolbar: {
-        display: [
-          "counter",
-          "zoom",
-          "slideshow",
-          "fullscreen",
-          "download",
-          "close",
-        ],
-      },
+          Toolbar: {
+            display: [
+              "counter",
+              "zoom",
+              "slideshow",
+              "fullscreen",
+              "download",
+              "close",
+            ],
+          },
 
-      Carousel: {
-        friction: 0.8,
-        preload: 2,
-      },
-    });
-  });
-</script>
+          Carousel: {
+            friction: 0.8,
+            preload: 2,
+          },
+        });
+      });
+    </script>
 
     <script src="assets/js/main.js"></script>
   </body>
